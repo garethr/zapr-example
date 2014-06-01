@@ -6,8 +6,11 @@ before_install:
   - tar -xvf download
   - git submodule update --init --recursive
 before_script:
-  - cd vendor/railsgoat; bundle install
-  - cd vendor/railsgoat; bundle exec rake db:setup
-  - cd vendor/railsgoat; bundle exec rails server
+  - ls
+  - cd vendor/railsgoat; ls
+  - cd vendor/railsgoat; cat Gemfile
+    # - cd vendor/railsgoat; bundle install
+    # - cd vendor/railsgoat; bundle exec rake db:setup
+    # - cd vendor/railsgoat; bundle exec rails server
 script:
   - zapr --summary --debug --zap-path ./ZAP_2.3.1/zap.sh http://localhost:3000/
