@@ -1,5 +1,5 @@
 [![Build
-Status](https://travis-ci.org/garethr/zapr.svg)](https://travis-ci.org/garethr/zapr)
+Status](https://travis-ci.org/garethr/zapr-example.svg)](https://travis-ci.org/garethr/zapr-example)
 
 An example of using [Zapr](https://github.com/garethr/zapr) to test a
 vulnerable web application, in this case
