@@ -6,9 +6,9 @@ before_install:
   - tar -xvf download
   - git submodule update --init --recursive
 before_script:
-  - cd vendor/railsgoat
-  #- bundle exec rake db:setup
-  #- bundle exec rails server -d
+  - pushd vendor/railsgoat
+  - bundle exec rake db:setup
+  - bundle exec rails server -d
+  - popd
 script:
-  - pwd
-  - zapr --summary --debug --zap-path ZAP_2.3.1/zap.sh http://localhost:3000/
+  - zapr --summary --debug --zap-path $TRAVIS_BUILD_DIR/ZAP_2.3.1/zap.sh http://localhost:3000/
